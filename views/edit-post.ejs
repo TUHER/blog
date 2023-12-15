@@ -1,0 +1,21 @@
+<%- include('./partials/header.ejs') %>   <%- include('./partials/navmenu.ejs') %> 
+    <style>body{background: url(/img/free-pixel-art-game-asset-with-enemy-included-v0-gujtmhlrhu791.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    } </style>
+    <div class="login_form">
+        <form  method="post" action="/edit-post/<%=post.id%>?_method=PUT">
+          
+          <input type="text" id="post_author" name="postAuthor" placeholder="автор" required>
+        
+          <input type="text" id="post_title" name="postTitle" placeholder="заголовок" required>
+
+          <textarea id="post_content" name="postContent" rows="5" required></textarea>
+        
+          <button type="submit">Опублікувати</button>
+        </form>
+    </div>
+   
+<%- include('./partials/footer.ejs') %>    

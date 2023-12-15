@@ -1,0 +1,40 @@
+<%- include('./partials/header.ejs') %>   <%- include('./partials/navmenu.ejs') %> 
+    <style>body{background: url('/img/free-pixel-art-game-asset-with-enemy-included-v0-gujtmhlrhu791.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    
+    }
+     </style>
+    <%posts.forEach(function(post) {%>
+    <article>
+        <div>
+            <span><%= post.createdAt.toLocaleString()%></span>
+            <span><%= post.postAuthor%></span>
+        </div>
+        <h1><%= post.postTitle%></h1>
+        <p><%= post.postContent%></p>
+        <h2><a class="confirmDeletion" href="" data-id="<%= post._id %>">Видалити</a></h2>
+        <h3><a href="/edit-post/<%= post.id %>">Редагувати</a></h3>
+        
+    </article>
+   <% })%>
+   <script>
+    
+    document.addEventListener("click", (e)=> 
+    {
+        const id = e.target?.dataset?.id || null;
+        
+        if(id){
+            fetch(`/post/${id}`, {
+                method: "DELETE",
+            }).then(() =>
+            {
+                window.location.reload();
+            });
+            
+        }
+    });
+   </script>
+<%- include('./partials/footer.ejs') %>    

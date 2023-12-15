@@ -1,0 +1,118 @@
+body
+{
+  background: url(/img/Floating-City-Pixel-World-AI-Generated-4K-Wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: red;
+  background-position: center center;
+  background-attachment: fixed;
+}
+header
+{
+    background-color: rgba(43, 52, 58, 0.918);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    padding: 5px;
+    line-height: 10px;
+}
+header h1
+{
+    font-size: 250%;
+    opacity: 0.7;
+   font-family: Arial, Helvetica, sans-serif;
+}
+header a
+{
+   
+    font-size: 140%;
+    margin-right: 30px;
+    text-decoration: none;
+    color:rgb(135, 21, 228);
+}
+footer
+{
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+form input
+{
+    margin-bottom: 10px;
+    font-size:medium;
+    border-radius: 5px;
+}
+
+.login_form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+form
+{
+    text-decoration: none;
+    width: 200px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+article
+{
+    height: 145px;
+    width: 395px;
+    margin-top: 100px;
+    margin-bottom: -90px;
+    margin-left: 35%;
+    padding: 5px;
+    border-radius: 15px 5px 15px 5px;
+    background-color: rgba(61, 107, 151, 0.829);
+}
+
+article div 
+{
+    display: flex;
+    justify-content: space-between;
+}
+  
+article span 
+{
+    font-size: 14px;
+    color: rgb(170, 190, 39)
+}
+  
+article h1 
+{
+    text-align: center; /* Вирівнює заголовок по центру */
+}
+  
+article p 
+{
+    margin-top: 10px; /* Відступ зверху від текстового блоку */
+}
+article h2
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: right;
+    font-size: 15px;
+    color: rgb(2, 1, 2);
+    text-shadow: rgb(43, 145, 114) 1px 0 10px;
+    margin-right: 5px;
+}
+article h3
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 15px;
+    color: rgb(2, 1, 2);
+    text-shadow: rgb(43, 145, 114) 1px 0 10px;
+    margin-left: 5px;
+    margin-top: -35px;
+}
