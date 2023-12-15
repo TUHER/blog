@@ -13,7 +13,7 @@ mongoose.connect(base)
 .catch((error)=>console.log(error));
 
 
-let createPath = (page) => path.join(__dirname,"views", `${page}.html`);
+let createPath = (page) => path.join(__dirname, `${page}.html`);
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/static', express.static(path.join(__dirname, 'public')));
 
@@ -93,6 +93,15 @@ app.delete("/post/:id", (req, res) =>
 
 
 
+
+app.post('/blog',(req,res)=>{
+  page_parameters = {title: "blog", page_title: "blog"}
+  const {postAuthor, postTitle, postContent} = req.body;
+  const post = Post({postAuthor, postTitle, postContent})
+  post.save()
+  .then((result)=>res.render("blog",{page_parameters}))
+  .catch((error)=>console.log(error))
+})
 /*
 app.get('/about', (req, res)=>{
   res.render('about', {title: 'About',
